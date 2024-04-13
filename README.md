@@ -11,13 +11,14 @@ iSimpleRadar is a simple radar hub, designed to be used for free with iRacing, p
 - In this version the overlay is running with V-SYNC, 60 FPS the graphics and with TextAntialising on
 
 ## RoadMap
-  -Carleft/CarRight graphics
-  -Add configuration V-SYNC, FPS, TextAntialising 
-  -Add support to add hotkey to adjust de position
-  -Generate first release
-  -Improve performance
+  - Carleft/CarRight graphics
+  - Add configuration V-SYNC, FPS, TextAntialising 
+  - Add support to add hotkey to adjust de position
+  - Generate first release
+  - Improve performance
 
 ## Donate
+Please 'buy me a coffee' so that I can stay awake all night to improve the project :)
 <a href="https://www.buymeacoffee.com/marcoscavaleiro" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 ## Contributing
 
