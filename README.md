@@ -3,6 +3,7 @@
 iSimpleRadar is a simple radar hub, designed to be used for free with iRacing, providing a clear view of other drivers' positions relative to the player.
 ## installation
  - To install you can download the .exe from the [releases](https://github.com/marcoscavaleiro/iSimpleRadar/releases)
+ - The iSimpleRadar only works in windowed/borderless mode. This is not a limitaion of the iSimpleRadar... it's about windows and directx
  - If you want can clone the repo and open in VS Code or Visual Studio (for this you will need to donwload the .net 8 sdk
 ## Features
 
