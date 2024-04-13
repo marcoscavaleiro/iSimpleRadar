@@ -1,10 +1,17 @@
-# iSimpleRadar - ALPHA VERSION
+# iSimpleRadar 
 
 iSimpleRadar is a simple radar hub, designed to be used for free with iRacing, providing a clear view of other drivers' positions relative to the player.
 ## installation
  - To install you can download the .exe from the [releases](https://github.com/marcoscavaleiro/iSimpleRadar/releases)
  - The iSimpleRadar only works in windowed/borderless mode. This is not a limitaion of the iSimpleRadar... it's about windows and directx
  - If you want can clone the repo and open in VS Code or Visual Studio (for this you will need to donwload the .net 8 sdk
+ ![screenRadar](https://github.com/marcoscavaleiro/iSimpleRadar/assets/3036194/9db6f83b-1371-4086-afc4-05ff9655ee1e)
+## Donate
+Please 'buy me a coffee' so that I can stay awake all night to improve the project :)
+
+<a href="https://www.buymeacoffee.com/marcoscavaleiro" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M6WV05V)
+
 ## Features
 
 - Displays the positions of other drivers relative to the player in real-time.
@@ -13,6 +20,9 @@ iSimpleRadar is a simple radar hub, designed to be used for free with iRacing, p
 - Side positions (car left/car right) are still in development and currently display only a text message.
 - In this version the overlay is running with V-SYNC, 60 FPS the graphics and with TextAntialising on
 - The iSimpleRadar was developed in c# using .net sdk 8 but the .exe is self contained you dont need to install the frameork
+  [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/G4iZ-HIkkrA/0.jpg)](https://www.youtube.com/watch?v=G4iZ-HIkkrA)
+ 
+
 
 ## RoadMap
   - Carleft/CarRight graphics
@@ -21,11 +31,6 @@ iSimpleRadar is a simple radar hub, designed to be used for free with iRacing, p
   - Generate first release
   - Improve performance
 
-## Donate
-Please 'buy me a coffee' so that I can stay awake all night to improve the project :)
-
-<a href="https://www.buymeacoffee.com/marcoscavaleiro" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M6WV05V)
 ## Contributing
 
 Feel free to contribute improvements to the project. 
