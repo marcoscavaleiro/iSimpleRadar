@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="iRacingSdkWrapper">
+      <HintPath>..\pkgs\iRacingSdkWrapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="iRSDKSharp">
+      <HintPath>..\pkgs\iRSDKSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="YamlDotNet">
+      <HintPath>..\pkgs\YamlDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GameOverlay.Net" Version="4.3.1" />
+    <PackageReference Include="NHotkey.WindowsForms" Version="3.0.0" />
+  </ItemGroup>
+
+</Project>
