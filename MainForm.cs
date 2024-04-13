@@ -102,7 +102,7 @@ namespace iSimpleRadar
         {
             // Indicate that we are updating the drivers list
             isUpdatingDrivers = true;
-            trackLen = float.Parse(e.SessionInfo["WeekendInfo"]["TrackLength"].GetValue("0").Replace(" km","")) * 1000f;
+            trackLen = float.Parse(e.SessionInfo["WeekendInfo"]["TrackLength"].GetValue("0").Replace(" km", "")) * 1000f;
             // Parse the Drivers section of the session info into a list of drivers
             this.ParseDrivers(e.SessionInfo);
             // Indicate we are finished updating drivers
@@ -197,7 +197,7 @@ namespace iSimpleRadar
 
             bool closeCar = false;
             bool closeCarDanger = false;
-            
+
             // Loop through the list of current drivers
             foreach (Driver driver in drivers)
             {
@@ -221,49 +221,48 @@ namespace iSimpleRadar
                     driver.DistFromMe = (trackLen * relative) + carSize;
                     if (driver.DistFromMe >= -20f && driver.DistFromMe < -10f)
                     {
-                        overlay.CarBehindWarn = "Car: " + driver.Number + "|Dist: " + Math.Round(driver.DistFromMe + 5f, 2);
-                        //  overlay.text="Carro Aproximando: "+driver.Name+" - "+driver.DistFromMe+" meters"; 
+                        overlay.CarBehindWarn = "Car: " + driver.Number + "|Dist: " + Math.Round(driver.DistFromMe + 5f, 1) + "m";
                         overlay.posY = driver.DistFromMe;
                         closeCar = true;
                     }
                     else if (driver.DistFromMe >= -10f && driver.DistFromMe < 0f)
                     {
-                        overlay.CarBehindDanger = "Car: " + driver.Number + "|Dist: " + Math.Round(driver.DistFromMe, 2);
-                        //  overlay.text="Carro Aproximando: "+driver.Name+" - "+driver.DistFromMe+" meters"; 
+                        overlay.CarBehindDanger = "Car: " + driver.Number + "|Dist: " + Math.Round(driver.DistFromMe, 1) + "m";
                         closeCarDanger = true;
                         overlay.posY = driver.DistFromMe + 5f;
                     }
-                    // else if ((Enums.CarLeftRight)iracingWrapper.GetData("CarLeftRight") == Enums.CarLeftRight.irsdk_LRClear)
-                    //     overlay.textDebug="";
-                    // else if ((Enums.CarLeftRight)iracingWrapper.GetData("CarLeftRight") == Enums.CarLeftRight.irsdk_LRCarLeft)
-                    // {
-                    //     if (driver.DistFromMe-carSize >= 0f && driver.DistFromMe-carSize <= carSize / 2)
-                    //         overlay.textDebug = "Carro esquerda baixo";
-                    //     else if (driver.DistFromMe-carSize > carSize / 2 && driver.DistFromMe-carSize <= carSize + 2f)
-                    //         overlay.textDebug = "Carro esquerda alto";
-                    // }
+
                 }
                 else
                 {
                     driver.RelativeLapDistance = -1;
                 }
             }
-            //    drivers= drivers.OrderBy(x => x.RelativeLapDistance).ToList();
+
             if (!closeCar)
                 overlay.CarBehindWarn = "";
             if (!closeCarDanger)
                 overlay.CarBehindDanger = "";
-            if ((Enums.CarLeftRight)iracingWrapper.GetData("CarLeftRight") == Enums.CarLeftRight.irsdk_LRClear)
-                  overlay.textDebug="";
-            else if ((Enums.CarLeftRight)iracingWrapper.GetData("CarLeftRight") == Enums.CarLeftRight.irsdk_LRCarLeft)
+            Enums.CarLeftRight carLeftRight = (Enums.CarLeftRight)iracingWrapper.GetData("CarLeftRight");
+            if (carLeftRight == Enums.CarLeftRight.irsdk_LRClear)
             {
-                overlay.textDebug = "left";
-                
+                overlay.carLeft = false;
+                overlay.carRight = false;
             }
-            else if ((Enums.CarLeftRight)iracingWrapper.GetData("CarLeftRight") == Enums.CarLeftRight.irsdk_LRCarRight)
+            if (carLeftRight == Enums.CarLeftRight.irsdk_LRCarLeft || carLeftRight == Enums.CarLeftRight.irsdk_LR2CarsLeft)
             {
-                overlay.textDebug = "right";
-                
+                overlay.carLeft = true;
+
+            }
+            if (carLeftRight == Enums.CarLeftRight.irsdk_LRCarRight || carLeftRight == Enums.CarLeftRight.irsdk_LR2CarsRight)
+            {
+                overlay.carRight = true;
+
+            }
+            if (carLeftRight == Enums.CarLeftRight.irsdk_LRCarRight)
+            {
+                overlay.carLeft = true;
+                overlay.carRight = true;
             }
 
         }

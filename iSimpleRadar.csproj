@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Version>$(VersionPrefix)</Version>
+    <Company>$(Authors)</Company>
   </PropertyGroup>
 
   <ItemGroup>
