@@ -25,6 +25,7 @@ iSimpleRadar is a simple radar hub, designed to be used for free with iRacing, p
 Please 'buy me a coffee' so that I can stay awake all night to improve the project :)
 
 <a href="https://www.buymeacoffee.com/marcoscavaleiro" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M6WV05V)
 ## Contributing
 
 Feel free to contribute improvements to the project. 
